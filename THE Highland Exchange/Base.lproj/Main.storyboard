@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="z1K-Gp-JU0">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="hr0-bo-9li">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="z1K-Gp-JU0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="arr-tL-5Sg">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="WkR-xq-d32" kind="relationship" relationship="rootViewController" id="ahD-5N-VNw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9N-d5-JIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1729" y="-7"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="T7S-Gm-rJw">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="WkR-xq-d32" customClass="WelcomeViewController" customModule="THE_Highland_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yv2-Sm-iLx">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="THE APP LOGO-01" translatesAutoresizingMaskIntoConstraints="NO" id="n4G-Te-kH2">
+                                <rect key="frame" x="0.0" y="242" width="393" height="393"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="n4G-Te-kH2" secondAttribute="height" id="IVY-6X-nR6"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t6L-HL-zSq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n4G-Te-kH2" firstAttribute="centerY" secondItem="t6L-HL-zSq" secondAttribute="centerY" id="GwR-B9-nhf"/>
+                            <constraint firstItem="n4G-Te-kH2" firstAttribute="centerX" secondItem="t6L-HL-zSq" secondAttribute="centerX" id="a5t-RE-rWU"/>
+                            <constraint firstItem="n4G-Te-kH2" firstAttribute="width" secondItem="Yv2-Sm-iLx" secondAttribute="width" id="juC-Zs-YJy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="f2g-bl-Al0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GE0-6e-pRz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1054.1984732824426" y="-7.042253521126761"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="T7H-e3-I66">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="ywI-db-q0R" customClass="ViewController" customModule="THE_Highland_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="msG-Hx-Gmd">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygo-qE-uei">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="RyN-Y9-RKe">
+                                <rect key="frame" x="165" y="416" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="u03-Bz-RqW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ygo-qE-uei" firstAttribute="leading" secondItem="u03-Bz-RqW" secondAttribute="leading" id="DIa-1e-2M5"/>
+                            <constraint firstItem="u03-Bz-RqW" firstAttribute="trailing" secondItem="ygo-qE-uei" secondAttribute="trailing" id="Rwa-vU-Onu"/>
+                            <constraint firstItem="ygo-qE-uei" firstAttribute="top" secondItem="u03-Bz-RqW" secondAttribute="top" id="WEA-rj-y2x"/>
+                            <constraint firstAttribute="bottom" secondItem="ygo-qE-uei" secondAttribute="bottom" id="uBS-al-qBH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="RyN-Y9-RKe" id="a5j-Z5-CYm"/>
+                        <outlet property="webVw" destination="ygo-qE-uei" id="L0H-Nf-bKz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QMz-IX-Vy3" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-408" y="-7"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="THE APP LOGO-01" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
